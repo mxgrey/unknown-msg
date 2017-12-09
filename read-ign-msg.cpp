@@ -14,7 +14,7 @@
 // Comment or uncomment the below #define statement to toggle between whether
 // ign-msgs is linked to this application.
 
-//#define USE_IGN_MSGS
+#define USE_IGN_MSGS
 
 
 
