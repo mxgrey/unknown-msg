@@ -2,11 +2,11 @@
 
 This is a very simple project that tests my understanding of how protobuf handles unknown message types. In particular, how can we serialize a message whose Descriptor is not available?
 
-My solution: Define an "Unknown" message type which has no fields, and parse the unknown message into it. Then we can use protobuf's Reflection and UnknownFieldSet interfaces to inspect the deserialized message.
+My solution: Define an "Unknown" message type which has no fields, and parse the unknown message into it. Then we can use protobuf's `Reflection` and `UnknownFieldSet` interfaces to inspect the deserialized message.
 
 To try out this project, you'll need the default branch of [ign-msgs](https://bitbucket.org/ignitionrobotics/ign-msgs), which depends on [ign-cmake](https://bitbucket.org/ignitionrobotics/ign-cmake) and [protobuf](https://github.com/google/protobuf).
 
-Configure, compile, then run the `write-ign-msg` executable. That will create two files in your build directory.
+Configure, compile, then run the `write-ign-msg` executable. That will create two files in your current working directory.
 
 After that, you can run `read-ign-msg`. By default, the executable will link to `ign-msgs`, which allows the executable to identify the message and parse it into its known structure.
 
